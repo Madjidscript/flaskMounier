@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>liste des eleves</p>
+    {% if eleves | length==0 %}
+        <p>aucune reponse a votre recherche</p>
+    {% else %}
+      {% for ele in eleves %}
+        <p> {{ele.nom}} {{ele.prenom}} {{ele.rang}} {{ele.classe}} </p>
+      {% endfor  %}
+    {% endif %}
+
+
+</body>
+</html>
